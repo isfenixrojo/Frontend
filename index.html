@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexusTech · Consultoría Informática</title>
+  <meta name="description" content="Empresa de consultoría informática especializada en tecnologías, formación, cursos y desarrollo de software a medida." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef4ff', 100: '#d9e6ff', 200: '#bcd3ff', 300: '#8eb6ff',
+              400: '#598dff', 500: '#3366ff', 600: '#1f47f5', 700: '#1735e1',
+              800: '#192db6', 900: '#1b2c8f', 950: '#151a52'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-2 shrink-0">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-600 text-white font-bold text-lg">N</span>
+          <span class="text-lg font-extrabold tracking-tight text-slate-900">Nexus<span class="text-brand-600">Tech</span></span>
+        </a>
+
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex items-center gap-1">
+          <li><a href="#inicio" class="px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 transition">Inicio</a></li>
+          <li><a href="#acerca" class="px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 transition">Acerca</a></li>
+          <li><a href="#tecnologias" class="px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 transition">Tecnologías</a></li>
+          <li><a href="#cursos" class="px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 transition">Cursos</a></li>
+          <li><a href="#desarrollos" class="px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 transition">Desarrollos</a></li>
+        </ul>
+
+        <div class="hidden md:block">
+          <a href="#contacto" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition shadow-sm">Contáctanos</a>
+        </div>
+
+        <!-- Mobile button -->
+        <button id="menu-btn" aria-label="Abrir menú" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md text-slate-700 hover:bg-slate-100">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-100 bg-white">
+      <ul class="px-4 pt-2 pb-4 space-y-1">
+        <li><a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50">Inicio</a></li>
+        <li><a href="#acerca" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50">Acerca</a></li>
+        <li><a href="#tecnologias" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50">Tecnologías</a></li>
+        <li><a href="#cursos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50">Cursos</a></li>
+        <li><a href="#desarrollos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50">Desarrollos</a></li>
+        <li class="pt-2"><a href="#contacto" class="block text-center px-4 py-2 rounded-lg bg-brand-600 text-white text-base font-semibold">Contáctanos</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== INICIO / HERO ===================== -->
+    <section id="inicio" class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-brand-100"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-200/40 blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-300/30 blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-brand-600"></span> Consultoría informática
+            </span>
+            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              Transformamos tu <span class="text-brand-600">tecnología</span> en resultados.
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-xl">
+              Ayudamos a empresas a diseñar, implementar y escalar soluciones de software con estrategia, formación y desarrollo a medida.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#desarrollos" class="inline-flex justify-center items-center px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition shadow-sm">Ver desarrollos</a>
+              <a href="#cursos" class="inline-flex justify-center items-center px-6 py-3 rounded-lg bg-white text-brand-700 font-semibold border border-brand-200 hover:bg-brand-50 transition">Explorar cursos</a>
+            </div>
+            <dl class="mt-10 grid grid-cols-3 gap-6 max-w-md">
+              <div><dt class="text-2xl font-extrabold text-slate-900">+120</dt><dd class="text-sm text-slate-500">Proyectos</dd></div>
+              <div><dt class="text-2xl font-extrabold text-slate-900">+40</dt><dd class="text-sm text-slate-500">Clientes</dd></div>
+              <div><dt class="text-2xl font-extrabold text-slate-900">15</dt><dd class="text-sm text-slate-500">Años</dd></div>
+            </dl>
+          </div>
+
+          <div class="relative">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8">
+              <div class="flex items-center gap-3 pb-4 border-b border-slate-100">
+                <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                <span class="ml-2 text-xs text-slate-400 font-mono">nexustech // dashboard</span>
+              </div>
+              <div class="mt-5 space-y-4">
+                <div class="h-3 rounded bg-brand-100 w-3/4"></div>
+                <div class="h-3 rounded bg-slate-100 w-full"></div>
+                <div class="h-3 rounded bg-slate-100 w-5/6"></div>
+                <div class="grid grid-cols-3 gap-3 pt-2">
+                  <div class="h-20 rounded-lg bg-brand-50 border border-brand-100"></div>
+                  <div class="h-20 rounded-lg bg-brand-50 border border-brand-100"></div>
+                  <div class="h-20 rounded-lg bg-brand-50 border border-brand-100"></div>
+                </div>
+                <div class="h-24 rounded-lg bg-gradient-to-r from-brand-500 to-brand-700"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACERCA ===================== -->
+    <section id="acerca" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Acerca de nosotros</h2>
+          <p class="mt-4 text-slate-600 text-lg">Somos un equipo multidisciplinario de ingenieros y consultores comprometidos con la excelencia técnica.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold">🎯</div>
+            <h3 class="mt-4 text-lg font-semibold text-slate-900">Misión</h3>
+            <p class="mt-2 text-slate-600 text-sm">Brindar consultoría tecnológica que impulse la competitividad de nuestros clientes mediante soluciones eficientes.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold">🚀</div>
+            <h3 class="mt-4 text-lg font-semibold text-slate-900">Visión</h3>
+            <p class="mt-2 text-slate-600 text-sm">Ser el aliado tecnológico de referencia, líder en innovación y formación en el ecosistema digital.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold">💎</div>
+            <h3 class="mt-4 text-lg font-semibold text-slate-900">Valores</h3>
+            <p class="mt-2 text-slate-600 text-sm">Transparencia, calidad, compromiso y aprendizaje continuo en cada proyecto que emprendemos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TECNOLOGÍAS ===================== -->
+    <section id="tecnologias" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Tecnologías</h2>
+          <p class="mt-4 text-slate-600 text-lg">Dominamos el stack completo para llevar tus ideas a producción con confianza.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">🌐</div><h3 class="mt-3 font-semibold text-slate-900">Frontend</h3><p class="mt-1 text-xs text-slate-500">React · Vue · Tailwind</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">⚙️</div><h3 class="mt-3 font-semibold text-slate-900">Backend</h3><p class="mt-1 text-xs text-slate-500">Node · .NET · Python</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">🗄️</div><h3 class="mt-3 font-semibold text-slate-900">Bases de datos</h3><p class="mt-1 text-xs text-slate-500">SQL · MongoDB</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">☁️</div><h3 class="mt-3 font-semibold text-slate-900">Cloud</h3><p class="mt-1 text-xs text-slate-500">AWS · Azure</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">🐳</div><h3 class="mt-3 font-semibold text-slate-900">DevOps</h3><p class="mt-1 text-xs text-slate-500">Docker · K8s</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">🤖</div><h3 class="mt-3 font-semibold text-slate-900">IA / ML</h3><p class="mt-1 text-xs text-slate-500">Python · TensorFlow</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">📱</div><h3 class="mt-3 font-semibold text-slate-900">Móvil</h3><p class="mt-1 text-xs text-slate-500">Flutter · React Native</p>
+          </div>
+          <div class="group p-6 rounded-xl bg-white border border-slate-100 text-center hover:-translate-y-1 hover:shadow-lg transition">
+            <div class="text-3xl">🔐</div><h3 class="mt-3 font-semibold text-slate-900">Seguridad</h3><p class="mt-1 text-xs text-slate-500">OAuth · Pentest</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CURSOS ===================== -->
+    <section id="cursos" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Cursos</h2>
+          <p class="mt-4 text-slate-600 text-lg">Formación práctica impartida por profesionales en activo.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Card -->
+          <article class="flex flex-col rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition">
+            <div class="h-40 bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white text-4xl">💻</div>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Desarrollo web</span>
+              <h3 class="mt-1 text-lg font-semibold text-slate-900">Full-Stack con React y Node</h3>
+              <p class="mt-2 text-sm text-slate-600 flex-1">Construye aplicaciones completas desde el frontend hasta la API REST.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-sm font-bold text-slate-900">$299</span>
+                <a href="#contacto" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Inscribirme →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition">
+            <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-4xl">☁️</div>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Cloud</span>
+              <h3 class="mt-1 text-lg font-semibold text-slate-900">Fundamentos de AWS</h3>
+              <p class="mt-2 text-sm text-slate-600 flex-1">Despliega y escala aplicaciones en la nube de forma segura.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-sm font-bold text-slate-900">$349</span>
+                <a href="#contacto" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Inscribirme →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition">
+            <div class="h-40 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-4xl">🤖</div>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Inteligencia Artificial</span>
+              <h3 class="mt-1 text-lg font-semibold text-slate-900">Introducción a Machine Learning</h3>
+              <p class="mt-2 text-sm text-slate-600 flex-1">Aprende los conceptos y librerías esenciales de ML con Python.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-sm font-bold text-slate-900">$399</span>
+                <a href="#contacto" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Inscribirme →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DESARROLLOS ===================== -->
+    <section id="desarrollos" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Desarrollos</h2>
+          <p class="mt-4 text-slate-600 text-lg">Soluciones a medida que hemos construido para nuestros clientes.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-2">
+          <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:shadow-lg transition">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-slate-900">Portal ERP empresarial</h3>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700 font-medium">Web App</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Sistema integral de gestión de recursos con paneles en tiempo real y reportes automatizados.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+              <span class="px-2 py-1 rounded bg-slate-100">React</span>
+              <span class="px-2 py-1 rounded bg-slate-100">.NET</span>
+              <span class="px-2 py-1 rounded bg-slate-100">SQL Server</span>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:shadow-lg transition">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-slate-900">App de logística móvil</h3>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700 font-medium">Móvil</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Seguimiento de flotas y entregas con geolocalización y notificaciones push.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+              <span class="px-2 py-1 rounded bg-slate-100">Flutter</span>
+              <span class="px-2 py-1 rounded bg-slate-100">Firebase</span>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:shadow-lg transition">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-slate-900">Plataforma de cursos LMS</h3>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700 font-medium">E-learning</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Aula virtual con videoconferencia, evaluaciones y certificaciones integradas.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+              <span class="px-2 py-1 rounded bg-slate-100">Vue</span>
+              <span class="px-2 py-1 rounded bg-slate-100">Node.js</span>
+              <span class="px-2 py-1 rounded bg-slate-100">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:shadow-lg transition">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-slate-900">Asistente con IA</h3>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700 font-medium">IA</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Chatbot inteligente para atención al cliente con procesamiento de lenguaje natural.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+              <span class="px-2 py-1 rounded bg-slate-100">Python</span>
+              <span class="px-2 py-1 rounded bg-slate-100">TensorFlow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO (CTA) ===================== -->
+    <section id="contacto" class="py-20 bg-brand-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">¿Hablamos de tu próximo proyecto?</h2>
+        <p class="mt-4 text-brand-100 text-lg max-w-2xl mx-auto">Escríbenos y un consultor te ayudará a definir la mejor estrategia tecnológica.</p>
+        <a href="mailto:hola@nexustech.com" class="mt-8 inline-flex items-center px-8 py-3 rounded-lg bg-white text-brand-700 font-semibold hover:bg-brand-50 transition">Solicitar consultoría</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <a href="#inicio" class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-600 text-white font-bold text-lg">N</span>
+            <span class="text-lg font-extrabold text-white">Nexus<span class="text-brand-400">Tech</span></span>
+          </a>
+          <p class="mt-4 text-sm text-slate-400">Consultoría informática y desarrollo de software a medida para impulsar tu negocio.</p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wide">Navegación</h4>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#inicio" class="hover:text-brand-400 transition">Inicio</a></li>
+            <li><a href="#acerca" class="hover:text-brand-400 transition">Acerca</a></li>
+            <li><a href="#tecnologias" class="hover:text-brand-400 transition">Tecnologías</a></li>
+            <li><a href="#cursos" class="hover:text-brand-400 transition">Cursos</a></li>
+            <li><a href="#desarrollos" class="hover:text-brand-400 transition">Desarrollos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wide">Contacto</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-400">
+            <li>📍 Av. Tecnológica 123, Ciudad</li>
+            <li>✉️ <a href="mailto:hola@nexustech.com" class="hover:text-brand-400 transition">hola@nexustech.com</a></li>
+            <li>📞 <a href="tel:+34123456789" class="hover:text-brand-400 transition">+34 123 456 789</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wide">Síguenos</h4>
+          <div class="mt-4 flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-brand-600 flex items-center justify-center transition">in</a>
+            <a href="#" aria-label="X" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-brand-600 flex items-center justify-center transition">X</a>
+            <a href="#" aria-label="GitHub" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-brand-600 flex items-center justify-center transition">GH</a>
+            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-brand-600 flex items-center justify-center transition">YT</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col sm:flex-row justify-between gap-2">
+        <p>© 2026 NexusTech. Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ por el equipo de consultoría.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPT (entry point) ===================== -->
+  <script type="module" src="/src/assets/js/main.js"></script>
+</body>
+</html>

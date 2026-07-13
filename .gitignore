@@ -1,0 +1,19 @@
+# ignore de dependencias y build
+node_modules/
+dist/
+.vite/
+
+# logs
+*.log
+npm-debug.log*
+
+# entorno
+.env
+.env.local
+.env.*.local
+
+# editor / SO
+.DS_Store
+.idea/
+.vscode/
+*.swp
